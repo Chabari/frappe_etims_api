@@ -64,6 +64,57 @@ app_license = "mit"
 # 	"filters": "etims.utils.jinja_filters"
 # }
 
+doc_events = {
+    "Item": {
+        "after_insert": "etims.api.item.after_insert",
+        "on_update": "etims.api.item.on_update",
+        "on_trash": "etims.api.item.on_trash",
+    },
+    "Sales Invoice": {
+        "on_submit": "etims.api.invoice.on_submit",
+        "on_cancel": "etims.api.invoice.on_cancel",
+    }
+}
+
+jinja = {
+	"methods": [
+		"etims.utils.etims_qr_code",
+	],
+}
+
+
+fixtures = [
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                (
+                    "Company-custom_customizations",
+                    "Company-custom_maintain_etims_stock",
+                    "Company-custom_etims_password",
+                    "Company-custom_etims_username",
+                    "Item-custom_etims_item_code",
+                    "Item-custom_item_tax_class",
+                    "Item-custom_item_tax_type",
+                    "Sales Invoice-custom_etims_scu_receipt_no",
+                    "Sales Invoice-custom_etims_scdc_id",
+                    "Sales Invoice-custom_etims_internal_data",
+                    "Sales Invoice-custom_column_break_hbmxi",
+                    "Sales Invoice-custom_etims_invoiceverification_url",
+                    "Sales Invoice-custom_etims_scu_receipt_date",
+                    "Sales Invoice-custom_etims_signature",
+                    "Sales Invoice-custom_etims_invoice_no",
+                    "Sales Invoice-custom_etims",
+                ),
+            ]
+        ],
+    },
+    
+]
+
+
 # Installation
 # ------------
 
@@ -121,14 +172,6 @@ app_license = "mit"
 # Document Events
 # ---------------
 # Hook on document methods and events
-
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
 
 # Scheduled Tasks
 # ---------------
