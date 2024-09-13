@@ -21,10 +21,10 @@ def after_insert(doc, method):
             if doc.opening_stock 
             else 0,
     }   
-    res = post('/items', payload)
-    if res and res['status'] == 200:
-        doc.custom_etims_item_code = res['data']['itemCode']
-        doc.save()
+    # res = post('/items', payload)
+    # if res and res['status'] == 200:
+    #     doc.custom_etims_item_code = res['data']['itemCode']
+    #     doc.save()
         
 def on_update(doc, method):
     if doc.custom_etims_item_code:

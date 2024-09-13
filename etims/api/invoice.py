@@ -30,16 +30,16 @@ def on_submit(doc, method):
         "salesItems": items,
         "customerPin": taxid
     }
-    res = post('/invoices', payload)
-    if res and res['status'] == 200:
-        doc.custom_etims_invoice_no = str(res['data']['invoiceNo'])
-        doc.custom_etims_internal_data = res['data']['internalData']
-        doc.custom_etims_signature = res['data']['signature']
-        doc.custom_etims_scdc_id = res['data']['scdcId']
-        doc.custom_etims_scu_receipt_date = res['data']['scuReceiptDate']
-        doc.custom_etims_scu_receipt_no = str(res['data']['scuReceiptNo'])
-        doc.custom_etims_invoiceverification_url = res['data']['invoiceVerificationUrl']
-        doc.db_update()
+    # res = post('/invoices', payload)
+    # if res and res['status'] == 200:
+    #     doc.custom_etims_invoice_no = str(res['data']['invoiceNo'])
+    #     doc.custom_etims_internal_data = res['data']['internalData']
+    #     doc.custom_etims_signature = res['data']['signature']
+    #     doc.custom_etims_scdc_id = res['data']['scdcId']
+    #     doc.custom_etims_scu_receipt_date = res['data']['scuReceiptDate']
+    #     doc.custom_etims_scu_receipt_no = str(res['data']['scuReceiptNo'])
+    #     doc.custom_etims_invoiceverification_url = res['data']['invoiceVerificationUrl']
+    #     doc.db_update()
     
 def on_cancel(doc, method):
     if doc.custom_etims_invoice_no:
