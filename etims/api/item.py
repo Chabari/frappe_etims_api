@@ -53,9 +53,13 @@ def on_trash(doc, method):
 def sync_items():
     failed = []
     vattax = []
-    items = frappe.get_all("Item", filters={"custom_etims_item_code": None},fields=['name'])
+    items = frappe.db.sql("""
+        SELECT name
+        FROM `tabItem`
+        WHERE custom_etims_item_code IS NULL
+    """)
     for itm in items:
-        doc = frappe.get_doc('Item', itm.name)
+        doc = frappe.get_doc('Item', itm)
         taxcode = get_tax_code(doc)
         if taxcode == 'B':
             vattax.append(doc.name)
