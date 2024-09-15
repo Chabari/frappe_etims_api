@@ -96,7 +96,6 @@ fixtures = [
                     "Company-custom_etims_password",
                     "Company-custom_etims_username",
                     "Item-custom_etims_item_code",
-                    "Item-custom_item_tax_class",
                     "Item-custom_item_tax_type",
                     "Sales Invoice-custom_etims_scu_receipt_no",
                     "Sales Invoice-custom_etims_scdc_id",
