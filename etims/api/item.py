@@ -86,7 +86,8 @@ def sync_items():
             doc.save(ignore_permissions = True)
         else:
             failed.append({
-                'item': doc.item_name
+                'item': doc.item_name,
+                'res': res
             })
             
     frappe.response.failed = failed
