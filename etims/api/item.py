@@ -23,6 +23,7 @@ def after_insert(doc, method):
     if res and res['status'] == 200:
         doc.custom_etims_item_code = res['data']['itemCode']
         doc.save(ignore_permissions = True)
+        frappe.db.commit()
         
 def on_update(doc, method):
     if doc.custom_etims_item_code:
@@ -84,6 +85,7 @@ def sync_items():
         if res and res['status'] == 200:
             doc.custom_etims_item_code = res['data']['itemCode']
             doc.save(ignore_permissions = True)
+            frappe.db.commit()
         else:
             failed.append({
                 'item': doc.item_name,
@@ -93,15 +95,15 @@ def sync_items():
     frappe.response.failed = failed
     frappe.response.vattax = vattax
     
-@frappe.whitelist(allow_guest=True)  
-def get_items():
-    items = []
-    for itm in all_items:
-        item = frappe.get_doc("Item", itm.get('name'))
-        item.custom_etims_item_code = itm.get('itemCode')
-        item.save(ignore_permissions = True)
-        frappe.db.commit()
-        items.append(item)
+# @frappe.whitelist(allow_guest=True)  
+# def get_items():
+#     items = []
+#     for itm in all_items:
+#         item = frappe.get_doc("Item", itm.get('name'))
+#         item.custom_etims_item_code = itm.get('itemCode')
+#         item.save(ignore_permissions = True)
+#         frappe.db.commit()
+#         items.append(item)
         
-    frappe.response.items = items
+#     frappe.response.items = items
         
