@@ -80,3 +80,10006 @@ def get_qr_code_bytes(data, format: str) -> bytes:
 	buffered = BytesIO()
 	img.save(buffered, format=format)
 	return buffered.getvalue()
+
+item_groups = [
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "Rodenticide",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "Pumps",
+        "hs_code": ""
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "STICKERS\\SPREADER",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "Pumps",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DISINFECTANTS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "STICKERS\\SPREADER",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DISINFECTANTS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DISINFECTANTS",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "DISINFECTANTS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DISINFECTANTS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "DISINFECTANTS",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DISINFECTANTS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "FEEDS",
+        "hs_code": "0043.11.00"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "BIO STIMULANTS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "Rodenticide",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "Rodenticide",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "ACARICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FERTILIZERS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "Rodenticide",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "Pumps",
+        "hs_code": ""
+    },
+    {
+        "item_group": "STICKERS\\SPREADER",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "STICKERS\\SPREAD",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": "0111.11.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "DEWORMERS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "MINERALS",
+        "hs_code": "0039.11.26"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INSECTICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "MISC",
+        "hs_code": ""
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "INJECTABLES",
+        "hs_code": "0039.11.37"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "HERBICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "SEEDS",
+        "hs_code": ""
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FUNGICIDES",
+        "hs_code": "0019.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    },
+    {
+        "item_group": "FOLIARS",
+        "hs_code": "0024.12.00"
+    }
+]
