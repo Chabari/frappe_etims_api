@@ -22,7 +22,7 @@ def after_insert(doc, method):
     res = post('/items', payload)
     if res and res['status'] == 200:
         doc.custom_etims_item_code = res['data']['itemCode']
-        doc.save()
+        doc.save(ignore_permissions = True)
         
 def on_update(doc, method):
     if doc.custom_etims_item_code:
@@ -83,7 +83,7 @@ def sync_items():
         res = post('/items', payload)
         if res and res['status'] == 200:
             doc.custom_etims_item_code = res['data']['itemCode']
-            doc.save()
+            doc.save(ignore_permissions = True)
         else:
             failed.append({
                 'item': doc.item_name
