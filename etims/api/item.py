@@ -57,7 +57,7 @@ def sync_items():
     items = frappe.db.sql("""
         SELECT name
         FROM `tabItem`
-        WHERE custom_etims_item_code IS NULL LIMIT 100
+        WHERE custom_etims_item_code IS NULL LIMIT 200
     """)
     for itm in items:
         doc = frappe.get_doc('Item', itm)
