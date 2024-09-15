@@ -100,6 +100,7 @@ def get_items():
         item = frappe.get_doc("Item", itm.get('name'))
         item.custom_etims_item_code = itm.get('itemCode')
         item.save(ignore_permissions = True)
+        frappe.db.commit()
         items.append(item)
         
     frappe.response.items = items

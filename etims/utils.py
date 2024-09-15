@@ -8983,18 +8983,5 @@ all_items = [
             "qtyUnitCode": "U",
             "pkgUnitCode": "CT",
             "qty": 100000
-        },
-        {
-            "id": 24,
-            "name": "Test Item Tims",
-            "itemCode": "KE2UCT0000001",
-            "unitPrice": 100,
-            "itemType": "Product",
-            "typeCode": "2",
-            "itemClassCode": "99012019",
-            "taxCode": "A",
-            "qtyUnitCode": "U",
-            "pkgUnitCode": "CT",
-            "qty": 99998
         }
     ]
