@@ -107,7 +107,7 @@ fixtures = [
                     "Sales Invoice-custom_etims_signature",
                     "Sales Invoice-custom_etims_invoice_no",
                     "Sales Invoice-custom_etims",
-                    "Sales Invoice-custom_send_for_signng",
+                    "Sales Invoice-custom_send_for_signing",
                 ),
             ]
         ],
