@@ -95,15 +95,19 @@ def sync_items():
     frappe.response.failed = failed
     frappe.response.vattax = vattax
     
-# @frappe.whitelist(allow_guest=True)  
-# def get_items():
-#     items = []
-#     for itm in all_items:
-#         item = frappe.get_doc("Item", itm.get('name'))
-#         item.custom_etims_item_code = itm.get('itemCode')
-#         item.save(ignore_permissions = True)
-#         frappe.db.commit()
-#         items.append(item)
+@frappe.whitelist(allow_guest=True)  
+def get_items():
+    items = []
+    all_items = frappe.db.sql("""
+        SELECT name
+        FROM `tabItem`
+    """)
+    for itm in all_items:
+        item = frappe.get_doc("Item", itm.get('name'))
+        item.custom_etims_item_code = None
+        item.save(ignore_permissions = True)
+        frappe.db.commit()
+        items.append(item)
         
-#     frappe.response.items = items
+    frappe.response.items = items
         
