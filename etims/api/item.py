@@ -101,6 +101,7 @@ def get_items():
     all_items = frappe.db.sql("""
         SELECT name
         FROM `tabItem`
+        WHERE modified < CURDATE()
     """)
     for itm in all_items:
         item = frappe.get_doc("Item", itm)
