@@ -103,7 +103,7 @@ def get_items():
         FROM `tabItem`
     """)
     for itm in all_items:
-        item = frappe.get_doc("Item", itm.get('name'))
+        item = frappe.get_doc("Item", itm)
         item.custom_etims_item_code = None
         item.save(ignore_permissions = True)
         frappe.db.commit()
