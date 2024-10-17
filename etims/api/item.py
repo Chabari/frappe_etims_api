@@ -112,3 +112,13 @@ def get_items():
         
     frappe.response.items = items
         
+   
+@frappe.whitelist(allow_guest=True)  
+def update_item_code(name, code):
+
+    item = frappe.get_doc("Item", name)
+    item.custom_etims_item_code = code
+    item.save(ignore_permissions = True)
+    frappe.db.commit()
+    frappe.response.items = item
+        
