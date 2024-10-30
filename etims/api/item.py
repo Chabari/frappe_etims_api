@@ -126,8 +126,9 @@ def update_item_code(name, code):
 def allign_items():
     items = get('/items')
     saved = []
+    frappe.response.items = items 
     for itm in items:
-        item = frappe.get_doc("Item", itm.name)
+        item = frappe.get_doc("Item", itm['name'])
         if not item.custom_etims_item_code:
             item.custom_etims_item_code = itm.itemCode
             item.save(ignore_permissions = True)
