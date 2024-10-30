@@ -101,7 +101,7 @@ def get_items():
     all_items = frappe.db.sql("""
         SELECT name
         FROM `tabItem`
-        WHERE modified < CURDATE()
+        WHERE custom_etims_item_code IS NOT NULL
     """)
     for itm in all_items:
         item = frappe.get_doc("Item", itm)
