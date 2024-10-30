@@ -153,4 +153,4 @@ def allign_items():
         #         saved.append(xitem)
             
     frappe.response.saved = saved 
-    # frappe.response.allitems = theitems 
+    frappe.response.allitems = theitems 
