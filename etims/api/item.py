@@ -112,6 +112,7 @@ def get_items():
     #     frappe.db.commit()
     #     items.append(item)
         
+    frappe.response.total = len(all_items)
     frappe.response.items = all_items
         
    
@@ -129,7 +130,7 @@ def allign_items():
     items = get('/items')
     saved = []
     for itm in items['data']:
-        xitem = frappe.db.get_value('Item', {'item_code': itm['name']}, ['name'], as_dict=1)
+        xitem = frappe.db.get_value('Item', {'item_name': itm['name']}, ['name'], as_dict=1)
         if xitem: 
             item = frappe.get_doc("Item", xitem.name)
             if not item.custom_etims_item_code:
