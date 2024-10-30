@@ -140,8 +140,8 @@ def allign_items():
             num 
             for num in theitems 
             if num['name'] == itm
-        ][0]
-        if the_itm: 
+        ]
+        if len(the_itm) > 0: 
             saved.append(the_itm)
         # xitem = frappe.db.get_value('Item', {'item_name': itm['name']}, ['name'], as_dict=1)
         # if xitem: 
