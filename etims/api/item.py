@@ -129,9 +129,9 @@ def allign_items():
     saved = []
     frappe.response.items = items 
     for itm in items:
-        item = frappe.get_doc("Item", itm['name'])
+        item = frappe.get_doc("Item", itm.get('name'))
         if not item.custom_etims_item_code:
-            item.custom_etims_item_code = itm.itemCode
+            item.custom_etims_item_code = itm.get('itemCode')
             item.save(ignore_permissions = True)
             frappe.db.commit()
             saved.append(item)
