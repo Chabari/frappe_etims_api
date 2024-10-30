@@ -122,3 +122,16 @@ def update_item_code(name, code):
     frappe.db.commit()
     frappe.response.items = item
         
+@frappe.whitelist(allow_guest=True)  
+def allign_items():
+    items = get('/items')
+    saved = []
+    for itm in items:
+        item = frappe.get_doc("Item", itm.name)
+        if not item.custom_etims_item_code:
+            item.custom_etims_item_code = itm.itemCode
+            item.save(ignore_permissions = True)
+            frappe.db.commit()
+            saved.append(item)
+            
+    frappe.response.saved = saved 
