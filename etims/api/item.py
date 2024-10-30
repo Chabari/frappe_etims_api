@@ -1,5 +1,6 @@
 import frappe
 from etims.utils import *
+import json
 
 def after_insert(doc, method):
     payload = {
@@ -126,9 +127,10 @@ def update_item_code(name, code):
 @frappe.whitelist(allow_guest=True)  
 def allign_items():
     items = get('/items')
+    theitems = json.loads(items)
     saved = []
-    frappe.response.items = items 
-    for itm in items:
+    frappe.response.items = theitems
+    for itm in theitems:
         item = frappe.get_doc("Item", itm.get('name'))
         if not item.custom_etims_item_code:
             item.custom_etims_item_code = itm.get('itemCode')
