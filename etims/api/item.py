@@ -101,16 +101,16 @@ def get_items():
     all_items = frappe.db.sql("""
         SELECT name
         FROM `tabItem`
-        WHERE custom_etims_item_code IS NOT NULL
+        WHERE custom_etims_item_code IS NULL
     """)
-    for itm in all_items:
-        item = frappe.get_doc("Item", itm)
-        item.custom_etims_item_code = None
-        item.save(ignore_permissions = True)
-        frappe.db.commit()
-        items.append(item)
+    # for itm in all_items:
+    #     item = frappe.get_doc("Item", itm)
+    #     item.custom_etims_item_code = None
+    #     item.save(ignore_permissions = True)
+    #     frappe.db.commit()
+    #     items.append(item)
         
-    frappe.response.items = items
+    frappe.response.items = all_items
         
    
 @frappe.whitelist(allow_guest=True)  
