@@ -2,7 +2,7 @@ import frappe
 from etims.utils import *
 
 def on_submit(doc, method):
-    if doc.custom_send_for_signing == 1:
+    if doc.custom_send_for_signing == 1 and get_main_company().custom_activate_etims == 1:
         items = []
         for itm in doc.items:
             item = frappe.get_doc("Item", itm.item_code)

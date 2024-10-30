@@ -9,10 +9,6 @@ from requests.auth import HTTPBasicAuth
 
 import qrcode
 
-headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json"
-}
 
 def get_main_company():
     return frappe.get_doc("Company", get_default_company())
@@ -26,26 +22,35 @@ def etims_password():
 def etims_username():
     return get_main_company().custom_etims_username
 
+def get_headers():
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        'tin': get_main_company().custom_kra_pin,
+        'bhfId': "00",
+    }
+    return headers
+    
 def get(endpoint):
-    response = requests.get(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=headers)
+    response = requests.get(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers())
     if not response.ok:
         return False
     return response.json()
 
 def delete(endpoint):
-    response = requests.delete(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=headers)
+    response = requests.delete(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers())
     if not response.ok:
         return False
     return response.json()
 
 def post(endpoint, payload):
-    response = requests.post(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=headers, json=payload)
+    response = requests.post(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), json=payload)
     # if not response.ok:
     #     return False
     return response.json()
 
 def put(endpoint, payload):
-    response = requests.put(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=headers, data=payload)
+    response = requests.put(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), data=payload)
     if not response.ok:
         return False
     return response.json()
