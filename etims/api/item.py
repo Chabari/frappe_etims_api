@@ -128,7 +128,6 @@ def update_item_code(name, code):
 def allign_items():
     items = get('/items')
     saved = []
-    frappe.response.items = items['data']
     for itm in items['data']:
         xitem = frappe.db.get_value('Item', {'item_code': itm['name']}, ['name'], as_dict=1)
         if xitem: 
