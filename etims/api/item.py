@@ -139,7 +139,7 @@ def allign_items():
         the_itm = [
             num 
             for num in theitems 
-            if itm['name'] == itm
+            if num['name'] == itm
         ][0]
         if the_itm: 
             saved.append(the_itm)
