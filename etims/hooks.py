@@ -179,23 +179,11 @@ fixtures = [
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"etims.tasks.all"
-# 	],
-# 	"daily": [
-# 		"etims.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"etims.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"etims.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"etims.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"daily": [
+		"etims.utils.update_items"
+	],
+}
 
 # Testing
 # -------

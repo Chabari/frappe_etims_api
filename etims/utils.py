@@ -119,3 +119,36 @@ def check_the_shift(user):
     else:
         data["isOpen"] = False
     return data
+
+def get_item_payloan(doc):
+    payload = {
+        "name": doc.item_code,
+        "orgCountryCode": "KE",
+        "unitPrice": doc.standard_rate or 1,
+        "itemTypeCode": get_item_type(doc.custom_item_tax_type) 
+            if doc.custom_item_tax_type 
+            else "2",
+        "taxCode": get_tax_code(doc),
+        "qtyUnitCode": "U",
+        "pkgUnitCode": "CT",
+        "itemClassCode": "99012019",
+        "initialStock": 100000 
+            if get_main_company().custom_maintain_etims_stock == 0
+            else doc.opening_stock 
+            if doc.opening_stock 
+            else 0,
+    }   
+    
+    return payload
+
+@frappe.whitelist()
+def update_items():
+    items = frappe.db.sql("""
+        SELECT name
+        FROM `tabItem`
+        WHERE custom_etims_item_code IS NOT NULL
+    """)
+    for itm in items:
+        doc = frappe.get_doc('Item', itm)
+        payload = get_item_payloan(doc)
+        put(f'/items/{doc.custom_etims_item_code}', payload)

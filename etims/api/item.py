@@ -3,24 +3,8 @@ from etims.utils import *
 import json
 
 def after_insert(doc, method):
-    payload = {
-        "name": doc.item_code,
-        "orgCountryCode": "KE",
-        "unitPrice": doc.standard_rate or 1,
-        "itemTypeCode": get_item_type(doc.custom_item_tax_type) 
-            if doc.custom_item_tax_type 
-            else "2",
-        "taxCode": get_tax_code(doc),
-        "qtyUnitCode": "U",
-        "pkgUnitCode": "CT",
-        "itemClassCode": "99012019",
-        "initialStock": 100000 
-            if get_main_company().custom_maintain_etims_stock == 0
-            else doc.opening_stock 
-            if doc.opening_stock 
-            else 0,
-    }   
     if get_main_company().custom_activate_etims == 1:
+        payload = get_item_payloan(doc)
         res = post('/items', payload)
         if res and res['status'] == 200:
             doc.custom_etims_item_code = res['data']['itemCode']
@@ -29,23 +13,7 @@ def after_insert(doc, method):
         
 def on_update(doc, method):
     if doc.custom_etims_item_code:
-        payload = {
-            "name": doc.item_code,
-            "orgCountryCode": "KE",
-            "unitPrice": doc.standard_rate or 1,
-            "itemTypeCode": get_item_type(doc.custom_item_tax_type) 
-                if doc.custom_item_tax_type 
-                else "2",
-            "taxCode": get_tax_code(doc),
-            "qtyUnitCode": "U",
-            "pkgUnitCode": "CT",
-            "itemClassCode": "99012019",
-            "initialStock": 100000 
-                if get_main_company().custom_maintain_etims_stock == 0
-                else doc.opening_stock 
-                if doc.opening_stock 
-                else 0,
-        }   
+        payload = get_item_payloan(doc)
         put(f'/items/{doc.custom_etims_item_code}', payload)
         
 def on_trash(doc, method):
@@ -66,23 +34,8 @@ def sync_items():
         taxcode = get_tax_code(doc)
         if taxcode == 'B':
             vattax.append(doc.name)
-        payload = {
-            "name": doc.item_code,
-            "orgCountryCode": "KE",
-            "unitPrice": doc.standard_rate or 1,
-            "itemTypeCode": get_item_type(doc.custom_item_tax_type) 
-                if doc.custom_item_tax_type 
-                else "2",
-            "taxCode": taxcode,
-            "qtyUnitCode": "U",
-            "pkgUnitCode": "CT",
-            "itemClassCode": "99012019",
-            "initialStock": 100000 
-                if get_main_company().custom_maintain_etims_stock == 0
-                else doc.opening_stock 
-                if doc.opening_stock 
-                else 0,
-        }   
+        
+        payload = get_item_payloan(doc)
         res = post('/items', payload)
         if res and res['status'] == 200:
             doc.custom_etims_item_code = res['data']['itemCode']
