@@ -69,7 +69,7 @@ def get_tax_code(ty):
             taxcode = "B"#16%
         else:
             taxcode = "A"#excempt
-    return taxcode
+    return taxcode 
 
 def get_datetime(data):
     datetime_obj = datetime.strptime(data, '%Y-%m-%d %H:%M:%S.%f')
@@ -95,3 +95,27 @@ def get_qr_code_bytes(data, format: str) -> bytes:
 	buffered = BytesIO()
 	img.save(buffered, format=format)
 	return buffered.getvalue()
+
+          
+@frappe.whitelist()
+def check_the_shift(user):
+    
+    open_vouchers = frappe.db.get_all(
+        "POS Opening Shift",
+        filters={
+            "user": user,
+            "pos_closing_shift": ["in", ["", None]],
+            "docstatus": 1,
+            "status": "Open",
+            "creation" : [ "<", frappe.utils.today() ]
+        },
+        fields=["name", "pos_profile"],
+        order_by="period_start_date desc",
+    )
+    data = {}
+    if len(open_vouchers) > 0:
+        
+        data["isOpen"] = True
+    else:
+        data["isOpen"] = False
+    return data
