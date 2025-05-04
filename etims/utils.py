@@ -65,7 +65,7 @@ def get_tax_code(ty):
     if taxes:
         tax = taxes[0]
         item_tax_template = tax.item_tax_template
-        if item_tax_template == "VAT 16%":
+        if item_tax_template in ["Kenya Tax - LL", "VAT 16%"]:
             taxcode = "B"#16%
         else:
             taxcode = "A"#excempt
