@@ -46,14 +46,14 @@ def delete(endpoint):
 
 def post(endpoint, payload):
     response = requests.post(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), json=payload)
-    # if not response.ok:
-    #     return False
+    if not response.ok:
+        return False
     return response.json()
 
 def put(endpoint, payload):
     response = requests.put(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), json=payload)
-    # if not response.ok:
-    #     return False
+    if not response.ok:
+        return False
     return response.json()
 
 def get_item_type(ty):
@@ -155,18 +155,14 @@ def update_items():
         WHERE custom_etims_item_code IS NOT NULL
     """)
     for itm in items:
-        doc = frappe.get_doc('Item', itm)
-        code = get_tax_code(doc)
-        
-        if code == "B":
-            enqueue(
-                method=submit_in_background,
-                queue="long",
-                is_async=True,
-                kwargs={
-                    "itm": itm,
-                },
-            )
+        enqueue(
+            method=submit_in_background,
+            queue="long",
+            is_async=True,
+            kwargs={
+                "itm": itm,
+            },
+        )
         
 def submit_in_background(kwargs):
     doc = frappe.get_doc('Item', kwargs.get('itm'))
