@@ -61,8 +61,9 @@ def get_items():
     for itm in items:
         doc = frappe.get_doc('Item', itm)
         payload = get_item_payloan(doc)
-        response = put(f'/items/{doc.custom_etims_item_code}', payload)
-        all_items.append(response)
+        all_items.append(payload)
+        # response = put(f'/items/{doc.custom_etims_item_code}', payload)
+        # all_items.append(response)
         
     frappe.response.total = len(all_items)
     frappe.response.items = all_items
