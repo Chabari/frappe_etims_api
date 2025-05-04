@@ -51,8 +51,8 @@ def post(endpoint, payload):
 
 def put(endpoint, payload):
     response = requests.put(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), data=payload)
-    if not response.ok:
-        return False
+    # if not response.ok:
+    #     return False
     return response.json()
 
 def get_item_type(ty):
@@ -141,7 +141,7 @@ def get_item_payloan(doc):
     
     return payload
 
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)  
 def update_items():
     items = frappe.db.sql("""
         SELECT name
