@@ -51,7 +51,7 @@ def post(endpoint, payload):
     return response.json()
 
 def put(endpoint, payload):
-    response = requests.put(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), data=payload)
+    response = requests.put(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), json=payload)
     # if not response.ok:
     #     return False
     return response.json()
