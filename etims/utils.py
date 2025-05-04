@@ -142,7 +142,7 @@ def get_item_payloan(doc):
             if get_main_company().custom_maintain_etims_stock == 0
             else doc.opening_stock 
             if doc.opening_stock 
-            else 0,
+            else 0
     }   
     
     return payload
