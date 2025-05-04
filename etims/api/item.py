@@ -52,18 +52,16 @@ def sync_items():
     
 @frappe.whitelist(allow_guest=True)  
 def get_items():
-    items = []
-    all_items = frappe.db.sql("""
+    items = frappe.db.sql("""
         SELECT name
         FROM `tabItem`
-        WHERE custom_etims_item_code IS NULL
+        WHERE custom_etims_item_code IS NOT NULL
     """)
-    # for itm in all_items:
-    #     item = frappe.get_doc("Item", itm)
-    #     item.custom_etims_item_code = None
-    #     item.save(ignore_permissions = True)
-    #     frappe.db.commit()
-    #     items.append(item)
+    all_items = []
+    for itm in items:
+        doc = frappe.get_doc('Item', itm)
+        payload = get_item_payloan(doc)
+        all_items.append(payload)
         
     frappe.response.total = len(all_items)
     frappe.response.items = all_items
