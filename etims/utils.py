@@ -157,6 +157,7 @@ def update_items():
     for itm in items:
         doc = frappe.get_doc('Item', itm)
         code = get_tax_code(doc)
+        
         if code == "B":
             enqueue(
                 method=submit_in_background,
