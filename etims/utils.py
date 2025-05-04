@@ -3,6 +3,7 @@ import requests
 from erpnext import get_default_company
 from datetime import datetime
 from base64 import b64encode
+from frappe.utils.background_jobs import enqueue
 from io import BytesIO
 
 from requests.auth import HTTPBasicAuth
@@ -154,6 +155,18 @@ def update_items():
         WHERE custom_etims_item_code IS NOT NULL
     """)
     for itm in items:
-        doc = frappe.get_doc('Item', itm)
-        payload = get_item_payloan(doc)
-        put(f'/items/{doc.custom_etims_item_code}', payload)
+        enqueue(
+            method=submit_in_background,
+            queue="short",
+            timeout=1000,
+            is_async=True,
+            kwargs={
+                "itm": itm,
+            },
+        )
+        
+def submit_in_background(kwargs):
+    doc = frappe.get_doc('Item', kwargs.get('itm'))
+    payload = get_item_payloan(doc)
+    put(f'/items/{doc.custom_etims_item_code}', payload)
+    
