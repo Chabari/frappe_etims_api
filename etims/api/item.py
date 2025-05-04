@@ -56,16 +56,17 @@ def get_items():
         SELECT name
         FROM `tabItem`
         WHERE custom_etims_item_code IS NOT NULL
+        LIMIT 30
     """)
     all_items = []
     for itm in items:
         doc = frappe.get_doc('Item', itm)
         payload = get_item_payloan(doc)
-        all_items.append(payload)
-        # response = put(f'/items/{doc.custom_etims_item_code}', payload)
-        # all_items.append(response)
+        # all_items.append(payload)
+        response = put(f'/items/{doc.custom_etims_item_code}', payload)
+        all_items.append(response)
         
-    frappe.response.total = len(all_items)
+    # frappe.response.total = len(all_items)
     frappe.response.items = all_items
         
    

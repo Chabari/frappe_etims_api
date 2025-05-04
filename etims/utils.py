@@ -52,8 +52,8 @@ def post(endpoint, payload):
 
 def put(endpoint, payload):
     response = requests.put(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), data=payload)
-    if not response.ok:
-        return False
+    # if not response.ok:
+    #     return False
     return response.json()
 
 def get_item_type(ty):
