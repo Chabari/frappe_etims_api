@@ -155,14 +155,17 @@ def update_items():
         WHERE custom_etims_item_code IS NOT NULL
     """)
     for itm in items:
-        enqueue(
-            method=submit_in_background,
-            queue="long",
-            is_async=True,
-            kwargs={
-                "itm": itm,
-            },
-        )
+        doc = frappe.get_doc('Item', itm)
+        code = get_tax_code(doc)
+        if code == "B":
+            enqueue(
+                method=submit_in_background,
+                queue="long",
+                is_async=True,
+                kwargs={
+                    "itm": itm,
+                },
+            )
         
 def submit_in_background(kwargs):
     doc = frappe.get_doc('Item', kwargs.get('itm'))
