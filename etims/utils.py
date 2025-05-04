@@ -51,8 +51,8 @@ def post(endpoint, payload):
 
 def put(endpoint, payload):
     response = requests.put(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), data=payload)
-    # if not response.ok:
-    #     return False
+    if not response.ok:
+        return False
     return response.json()
 
 def get_item_type(ty):
@@ -133,6 +133,11 @@ def get_item_payloan(doc):
         "pkgUnitCode": "CT",
         "itemClassCode": "99012019",
         "initialStock": 100000 
+            if get_main_company().custom_maintain_etims_stock == 0
+            else doc.opening_stock 
+            if doc.opening_stock 
+            else 0,
+        "stock": 100000 
             if get_main_company().custom_maintain_etims_stock == 0
             else doc.opening_stock 
             if doc.opening_stock 
