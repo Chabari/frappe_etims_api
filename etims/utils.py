@@ -157,8 +157,7 @@ def update_items():
     for itm in items:
         enqueue(
             method=submit_in_background,
-            queue="short",
-            timeout=1000,
+            queue="long",
             is_async=True,
             kwargs={
                 "itm": itm,
