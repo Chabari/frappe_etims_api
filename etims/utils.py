@@ -97,6 +97,12 @@ def get_qr_code_bytes(data, format: str) -> bytes:
 	img.save(buffered, format=format)
 	return buffered.getvalue()
 
+def get_delivery_note(name):
+    sales_invoice = frappe.get_doc("Sales Invoice", name)
+    delivery_note = "N/A"
+    for dn in sales_invoice.items:
+        delivery_note = dn.delivery_note
+    return delivery_note
           
 @frappe.whitelist()
 def check_the_shift(user):

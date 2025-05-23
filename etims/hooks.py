@@ -79,6 +79,7 @@ doc_events = {
 jinja = {
 	"methods": [
 		"etims.utils.etims_qr_code",
+		"etims.utils.get_delivery_note",
 	],
 }
 
