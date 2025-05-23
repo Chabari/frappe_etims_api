@@ -99,10 +99,18 @@ def get_qr_code_bytes(data, format: str) -> bytes:
 
 def get_delivery_note(name):
     sales_invoice = frappe.get_doc("Sales Invoice", name)
-    delivery_note = "N/A"
+    sales_order_name = None
     for dn in sales_invoice.items:
-        delivery_note = dn.delivery_note
-    return delivery_note
+        if dn.so_detail:
+            sales_order_name = dn.so_detail
+            break
+    if sales_order_name:
+        _delivery_note_item = frappe.db.get_value('Delivery Note Item', {'so_detail': sales_order_name}, ['name'], as_dict=1) 
+        if _delivery_note_item:
+            delivery_note = frappe.get_doc("Delivery Note Item", _delivery_note_item.name)
+            return delivery_note.parent
+        
+    return "N/A"
           
 @frappe.whitelist()
 def check_the_shift(user):
