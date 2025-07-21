@@ -50,6 +50,11 @@ def post(endpoint, payload):
         return False
     return response.json()
 
+
+def post2(endpoint, payload):
+    response = requests.post(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), json=payload)
+    return response
+
 def put(endpoint, payload):
     response = requests.put(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), json=payload)
     if not response.ok:
@@ -59,6 +64,20 @@ def put(endpoint, payload):
 def get_item_type(ty):
     return ty.split('-')[0]
 
+def get_taxes():
+    if get_default_company() == "LEGHORNS LIMITED":
+        return ["Kenya Tax - LL", "VAT 16%"]
+    
+    if get_default_company() == "THOME AGROFARM LTD":
+        return ["Kenya Tax - TAL", "VAT 16%"]
+
+    taxes = frappe.get_all(
+        "Item Tax Template",
+        filters={"company": get_default_company()},
+        fields=["name"]
+    )
+    return [tax.name for tax in taxes]
+
 def get_tax_code(ty):
     item_group = frappe.get_doc("Item Group", ty.item_group)
     taxes = item_group.taxes
@@ -66,7 +85,7 @@ def get_tax_code(ty):
     if taxes:
         tax = taxes[0]
         item_tax_template = tax.item_tax_template
-        if item_tax_template in ["Kenya Tax - LL", "VAT 16%"]:
+        if item_tax_template in get_taxes():
             taxcode = "B"#16%
         else:
             taxcode = "A"#excempt

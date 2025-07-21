@@ -49,6 +49,28 @@ def sync_items():
             
     frappe.response.failed = failed
     frappe.response.vattax = vattax
+
+
+@frappe.whitelist(allow_guest=True)  
+def sync_item(name):
+
+    doc = frappe.get_doc('Item', name)
+    taxcode = get_tax_code(doc)
+    
+    payload = get_item_payloan(doc)
+    res = post2('/items', payload)
+    if not res.ok:
+        frappe.response.res = res
+        return res
+    xres = res.json()
+
+    if xres and xres['status'] == 200:
+        doc.custom_etims_item_code = xres['data']['itemCode']
+        doc.save(ignore_permissions = True)
+        frappe.db.commit()
+   
+    frappe.response.xres = xres
+    
     
 @frappe.whitelist(allow_guest=True)  
 def get_items():
