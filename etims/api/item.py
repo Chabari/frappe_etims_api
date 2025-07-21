@@ -52,6 +52,23 @@ def sync_items():
 
 
 @frappe.whitelist(allow_guest=True)  
+def reset_items():
+    items = frappe.db.sql("""
+        SELECT name
+        FROM `tabItem`
+    """)
+    for itm in items:
+        frappe.db.sql("""
+            UPDATE `tabItem` 
+            SET custom_etims_item_code = NULL 
+            WHERE name = %(item_name)s
+        """, {"item_name": itm})
+        frappe.db.commit()
+        
+    return "successfully reset items"
+            
+
+@frappe.whitelist(allow_guest=True)  
 def sync_item(name):
 
     doc = frappe.get_doc('Item', name)
