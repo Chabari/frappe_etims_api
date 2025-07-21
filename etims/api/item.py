@@ -22,34 +22,36 @@ def on_trash(doc, method):
       
 @frappe.whitelist(allow_guest=True)  
 def sync_items():
-    failed = []
-    vattax = []
     items = frappe.db.sql("""
         SELECT name
         FROM `tabItem`
         WHERE custom_etims_item_code IS NULL
     """)
-    for itm in items:
-        doc = frappe.get_doc('Item', itm)
-        taxcode = get_tax_code(doc)
-        if taxcode == 'B':
-            vattax.append(doc.name)
-        
-        payload = get_item_payloan(doc)
-        res = post('/items', payload)
-        if res and res['status'] == 200:
-            doc.custom_etims_item_code = res['data']['itemCode']
-            doc.save(ignore_permissions = True)
-            frappe.db.commit()
-        else:
-            failed.append({
-                'item': doc.item_name,
-                'res': res
-            })
+    
+    frappe.enqueue('etims.api.item.save_sync_item', queue='long', items=items)
+    return "Success"
+    
+   
+def save_sync_item(items):
+    try:
+        for itm in items:
+            doc = frappe.get_doc('Item', itm)
+            taxcode = get_tax_code(doc)
+            if taxcode == 'B':
+                print("tax B")
             
-    frappe.response.failed = failed
-    frappe.response.vattax = vattax
-
+            payload = get_item_payloan(doc)
+            res = post('/items', payload)
+            if res and res['status'] == 200:
+                doc.custom_etims_item_code = res['data']['itemCode']
+                doc.save(ignore_permissions = True)
+                frappe.db.commit()
+            else:
+                print("tax A")
+    except Exception as e:
+        print(str(e))
+        frappe.log_error(frappe.get_traceback(), str(e))
+        
 
 @frappe.whitelist(allow_guest=True)  
 def reset_items():
