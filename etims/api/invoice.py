@@ -79,7 +79,11 @@ def test_payload(name):
         "customerPin": taxid
     }
     res = post2('/invoices', payload)
-    frappe.response.res = res
+    if not res.ok:
+        frappe.response.res = res.json()
+        frappe.response.success = False
+        return
+    res = res.json()
     if res and res['status'] == 200:
         doc.custom_etims_invoice_no = str(res['data']['invoiceNo'])
         doc.custom_etims_internal_data = res['data']['internalData']
@@ -91,3 +95,4 @@ def test_payload(name):
         doc.db_update()
         
     frappe.response.doc = doc
+    frappe.response.success = True
