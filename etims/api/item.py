@@ -149,3 +149,19 @@ def allign_items():
             
     frappe.response.saved = saved 
     frappe.response.allitems = theitems 
+    
+@frappe.whitelist(allow_guest=True)  
+def check_items_exist():
+    saved = []
+    items = get('/items')
+    theitems = items['data']
+    for itm in theitems:
+        xitem = frappe.db.get_value('Item', {'item_name': itm['name']}, ['name'], as_dict=1)
+        if xitem: 
+            item = frappe.get_doc("Item", xitem.name)
+            if not item.custom_etims_item_code:
+                item.custom_etims_item_code = itm['itemCode']
+                item.save(ignore_permissions = True)
+                frappe.db.commit()
+                saved.append(xitem)
+    frappe.response.saved = saved 
