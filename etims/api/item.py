@@ -68,7 +68,6 @@ def reset_items():
         frappe.db.commit()
         
     return "successfully reset items"
-            
 
 @frappe.whitelist(allow_guest=True)  
 def sync_item(name):

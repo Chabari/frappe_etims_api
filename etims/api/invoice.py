@@ -78,7 +78,7 @@ def test_payload(name):
         "salesItems": items,
         "customerPin": taxid
     }
-    res = post('/invoices', payload)
+    res = post2('/invoices', payload)
     frappe.response.res = res
     if res and res['status'] == 200:
         doc.custom_etims_invoice_no = str(res['data']['invoiceNo'])
