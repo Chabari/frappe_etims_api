@@ -78,7 +78,7 @@ def sync_item(name):
     payload = get_item_payloan(doc)
     res = post2('/items', payload)
     if not res.ok:
-        frappe.response.res = res
+        frappe.response.res = res.json()
         return res
     xres = res.json()
 
