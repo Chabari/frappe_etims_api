@@ -173,6 +173,11 @@ def get_all_items():
 
 
 @frappe.whitelist(allow_guest=True)  
+def init_manual_items(items):
+    frappe.enqueue('etims.api.item.manual_items', queue='long', items=items)
+    return "Success"
+    
+@frappe.whitelist(allow_guest=True)  
 def manual_items(items):
     saved = []
     for itm in items:
