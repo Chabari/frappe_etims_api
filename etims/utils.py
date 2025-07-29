@@ -92,8 +92,11 @@ def get_tax_code(ty):
     return taxcode 
 
 def get_datetime(data):
-    datetime_obj = datetime.strptime(data, '%Y-%m-%d %H:%M:%S.%f')
-    return datetime_obj.strftime('%Y%m%d%H%M%S')
+    try:
+        dt = datetime.strptime(data, '%Y-%m-%d %H:%M:%S.%f')
+    except ValueError:
+        dt = datetime.strptime(data, '%Y-%m-%d %H:%M:%S')
+    return dt.strftime('%Y%m%d%H%M%S')
 
 def bytes_to_base64_string(data: bytes) -> str:
 	"""Convert bytes to a base64 encoded string."""
