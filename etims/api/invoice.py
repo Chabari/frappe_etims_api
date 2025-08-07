@@ -3,15 +3,30 @@ from etims.utils import *
 
 def on_submit(doc, method):
     if doc.custom_send_for_signing == 1 and get_main_company().custom_activate_etims == 1:
+        included_in_print_rate = 0
+        if doc.get("taxes"):
+            for tax in doc.taxes:
+                included_in_print_rate = tax.included_in_print_rate
+        grand_total = 0
         items = []
         for itm in doc.items:
             item = frappe.get_doc("Item", itm.item_code)
+            tax_rate = 0
+            if itm.item_tax_template:
+                template = frappe.get_doc("Item Tax Template", itm.item_tax_template)
+                if template.taxes:
+                    for tx in template.taxes:
+                        tax_rate = tx.tax_rate
+                        
+            amount = itm.amount * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.amount
+            rate = amount / itm.qty
+            grand_total += amount
             myitem = {
                 "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
                 "qty": itm.qty,
                 "pkg": 0,
-                "unitPrice": abs(itm.rate),
-                "amount": abs(itm.amount),
+                "unitPrice": abs(rate),
+                "amount": abs(amount),
                 "discountAmount": 0
             }
             items.append(myitem)
@@ -20,7 +35,7 @@ def on_submit(doc, method):
             taxid = doc.tax_id
         payload = {
             "traderInvoiceNo": doc.name,
-            "totalAmount": abs(doc.grand_total),
+            "totalAmount": abs(grand_total),
             "paymentType": "02" if doc.status == "Unpaid" else "01",
             "salesTypeCode": "C" if doc.custom_etims_invoice_no else "N",
             "receiptTypeCode": "R" if doc.is_return == 1 else "S",
@@ -50,15 +65,30 @@ def on_cancel(doc, method):
 @frappe.whitelist(allow_guest=True)
 def test_payload(name):
     doc = frappe.get_doc("Sales Invoice", name)
+    included_in_print_rate = 0
+    if doc.get("taxes"):
+        for tax in doc.taxes:
+            included_in_print_rate = tax.included_in_print_rate
+    grand_total = 0
     items = []
     for itm in doc.items:
         item = frappe.get_doc("Item", itm.item_code)
+        tax_rate = 0
+        if itm.item_tax_template:
+            template = frappe.get_doc("Item Tax Template", itm.item_tax_template)
+            if template.taxes:
+                for tx in template.taxes:
+                    tax_rate = tx.tax_rate
+                    
+        amount = itm.amount * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.amount
+        rate = amount / itm.qty
+        grand_total += amount
         myitem = {
             "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
             "qty": itm.qty,
             "pkg": 0,
-            "unitPrice": abs(itm.rate),
-            "amount": abs(itm.amount),
+            "unitPrice": abs(rate),
+            "amount": abs(amount),
             "discountAmount": 0
         }
         items.append(myitem)
@@ -67,7 +97,7 @@ def test_payload(name):
         taxid = doc.tax_id
     payload = {
         "traderInvoiceNo": doc.name,
-        "totalAmount": abs(doc.grand_total),
+        "totalAmount": abs(grand_total),
         "paymentType": "02" if doc.status == "Unpaid" else "01",
         "salesTypeCode": "C" if doc.custom_etims_invoice_no else "N",
         "receiptTypeCode": "R" if doc.is_return == 1 else "S",
