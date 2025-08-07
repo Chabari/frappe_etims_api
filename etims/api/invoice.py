@@ -96,3 +96,35 @@ def test_payload(name):
         
     frappe.response.doc = doc
     frappe.response.success = True
+    
+@frappe.whitelist(allow_guest=True)
+def test_invoice(name):
+    doc = frappe.get_doc("Sales Invoice", name)
+    included_in_print_rate = 0
+    if doc.get("taxes"):
+        for tax in doc.taxes:
+            included_in_print_rate = tax.included_in_print_rate
+            
+    items = []
+    for itm in doc.items:
+        item = frappe.get_doc("Item", itm.item_code)
+        tax_rate = 0
+        if itm.item_tax_template:
+            template = frappe.get_doc("Item Tax Template", itm.item_tax_template)
+            if template.taxes:
+                for tx in template.taxes:
+                    tax_rate = tx.tax_rate
+                    
+        rate = itm.rate * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.rate
+        amount = itm.qty * rate
+        myitem = {
+            "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
+            "qty": itm.qty,
+            "pkg": 0,
+            "unitPrice": abs(rate),
+            "amount": abs(amount),
+            "discountAmount": 0
+        }
+        items.append(myitem)
+        
+    return items
