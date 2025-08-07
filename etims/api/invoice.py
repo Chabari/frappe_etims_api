@@ -116,8 +116,8 @@ def test_invoice(name):
                 for tx in template.taxes:
                     tax_rate = tx.tax_rate
                     
-        rate = itm.rate * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.rate
-        amount = itm.qty * rate
+        amount = itm.amount * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.amount
+        rate = amount / itm.qty
         total += amount
         myitem = {
             "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
