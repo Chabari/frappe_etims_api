@@ -106,6 +106,7 @@ def test_invoice(name):
             included_in_print_rate = tax.included_in_print_rate
             
     items = []
+    total = 0
     for itm in doc.items:
         item = frappe.get_doc("Item", itm.item_code)
         tax_rate = 0
@@ -117,6 +118,7 @@ def test_invoice(name):
                     
         rate = itm.rate * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.rate
         amount = itm.qty * rate
+        total += amount
         myitem = {
             "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
             "qty": itm.qty,
@@ -126,5 +128,5 @@ def test_invoice(name):
             "discountAmount": 0
         }
         items.append(myitem)
-        
-    return items
+    frappe.response.total = total
+    frappe.response.items = items
