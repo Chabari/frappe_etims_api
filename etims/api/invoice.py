@@ -223,7 +223,7 @@ def test_invoice(name):
         total += amount
         myitem = {
             "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
-            "qty": abs(itm.qty),
+            "qty": itm.qty,
             "pkg": 0,
             "unitPrice": abs(rate),
             "amount": abs(amount),
