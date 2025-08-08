@@ -158,5 +158,22 @@ def test_invoice(name):
             "discountAmount": 0
         }
         items.append(myitem)
-    frappe.response.total = total
-    frappe.response.items = items
+    
+    taxid = ""
+    if doc.tax_id:
+        taxid = doc.tax_id
+    payload = {
+        "traderInvoiceNo": doc.name,
+        "totalAmount": abs(total),
+        "paymentType": "02" if doc.status == "Unpaid" else "01",
+        "salesTypeCode": "C" if doc.custom_etims_invoice_no else "N",
+        "receiptTypeCode": "R" if doc.is_return == 1 else "S",
+        "salesStatusCode": "05" if doc.is_return == 1 else "01",
+        "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
+        "currency": "KES",
+        "exchangeRate": 1.0,
+        "salesItems": items,
+        "customerPin": taxid
+    }
+    
+    frappe.response.payload = payload
