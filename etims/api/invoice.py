@@ -165,7 +165,7 @@ def test_payload(name):
         taxid = doc.tax_id
     payload = {
         "traderInvoiceNo": doc.name,
-        "totalAmount": abs(doc.grand_total),
+        "totalAmount": abs(doc.total),
         "paymentType": "02" if doc.status == "Unpaid" else "01",
         "salesTypeCode": "C" if doc.is_return == 1 else "N",
         "receiptTypeCode": "R" if doc.is_return == 1 else "S",
