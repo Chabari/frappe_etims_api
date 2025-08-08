@@ -19,11 +19,11 @@ def on_submit(doc, method):
                         tax_rate = tx.tax_rate
                         
             amount = itm.amount * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.amount
-            rate = amount / itm.qty
+            rate = amount / abs(itm.qty)
             grand_total += amount
             myitem = {
                 "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
-                "qty": itm.qty,
+                "qty": abs(itm.qty),
                 "pkg": 0,
                 "unitPrice": abs(rate),
                 "amount": abs(amount),
@@ -39,7 +39,7 @@ def on_submit(doc, method):
             "paymentType": "02" if doc.status == "Unpaid" else "01",
             "salesTypeCode": "C" if doc.custom_etims_invoice_no else "N",
             "receiptTypeCode": "R" if doc.is_return == 1 else "S",
-            "salesStatusCode": "05" if doc.is_return == 1 else "01",
+            "salesStatusCode": "01",
             "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
             "currency": "KES",
             "exchangeRate": 1.0,
@@ -81,11 +81,11 @@ def test_payload(name):
                     tax_rate = tx.tax_rate
                     
         amount = itm.amount * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.amount
-        rate = amount / itm.qty
+        rate = amount / abs(itm.qty)
         grand_total += amount
         myitem = {
             "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
-            "qty": itm.qty,
+            "qty": abs(itm.qty),
             "pkg": 0,
             "unitPrice": abs(rate),
             "amount": abs(amount),
@@ -101,7 +101,7 @@ def test_payload(name):
         "paymentType": "02" if doc.status == "Unpaid" else "01",
         "salesTypeCode": "C" if doc.custom_etims_invoice_no else "N",
         "receiptTypeCode": "R" if doc.is_return == 1 else "S",
-        "salesStatusCode": "05" if doc.is_return == 1 else "01",
+        "salesStatusCode": "01",
         "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
         "currency": "KES",
         "exchangeRate": 1.0,
@@ -147,11 +147,11 @@ def test_invoice(name):
                     tax_rate = tx.tax_rate
                     
         amount = itm.amount * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.amount
-        rate = amount / itm.qty
+        rate = amount / abs(itm.qty)
         total += amount
         myitem = {
             "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
-            "qty": itm.qty,
+            "qty": abs(itm.qty),
             "pkg": 0,
             "unitPrice": abs(rate),
             "amount": abs(amount),
@@ -168,12 +168,17 @@ def test_invoice(name):
         "paymentType": "02" if doc.status == "Unpaid" else "01",
         "salesTypeCode": "C" if doc.custom_etims_invoice_no else "N",
         "receiptTypeCode": "R" if doc.is_return == 1 else "S",
-        "salesStatusCode": "05" if doc.is_return == 1 else "01",
+        "salesStatusCode": "01",
         "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
         "currency": "KES",
         "exchangeRate": 1.0,
         "salesItems": items,
         "customerPin": taxid
     }
+    
+    if doc.is_return == 1:
+        payload.update({
+            "traderOrgInvoiceNo": doc.return_against
+        })
     
     frappe.response.payload = payload
