@@ -68,6 +68,70 @@ def on_cancel(doc, method):
     
 @frappe.whitelist(allow_guest=True)
 def test_payload(name):
+    # doc = frappe.get_doc("Sales Invoice", name)
+    # included_in_print_rate = 0
+    # if doc.get("taxes"):
+    #     for tax in doc.taxes:
+    #         included_in_print_rate = tax.included_in_print_rate
+    # grand_total = 0
+    # items = []
+    # for itm in doc.items:
+    #     item = frappe.get_doc("Item", itm.item_code)
+    #     tax_rate = 0
+    #     if itm.item_tax_template:
+    #         template = frappe.get_doc("Item Tax Template", itm.item_tax_template)
+    #         if template.taxes:
+    #             for tx in template.taxes:
+    #                 tax_rate = tx.tax_rate
+                    
+    #     amount = itm.amount * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.amount
+    #     rate = amount / abs(itm.qty)
+    #     grand_total += amount
+    #     myitem = {
+    #         "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
+    #         "qty": abs(itm.qty),
+    #         "pkg": 0,
+    #         "unitPrice": abs(rate),
+    #         "amount": abs(amount),
+    #         "discountAmount": 0
+    #     }
+    #     items.append(myitem)
+    # taxid = ""
+    # if doc.tax_id:
+    #     taxid = doc.tax_id
+    # payload = {
+    #     "traderInvoiceNo": doc.name,
+    #     "totalAmount": abs(grand_total),
+    #     "paymentType": "02" if doc.status == "Unpaid" else "01",
+    #     "salesTypeCode": "C" if doc.is_return == 1 else "N",
+    #     "receiptTypeCode": "R" if doc.is_return == 1 else "S",
+    #     "salesStatusCode": "01",
+    #     "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
+    #     "currency": "KES",
+    #     "exchangeRate": 1.0,
+    #     "salesItems": items,
+    #     "customerPin": taxid
+    # }
+    # if doc.is_return == 1:
+    #     payload.update({
+    #         "traderOrgInvoiceNo": doc.return_against
+    #     })
+    # res = post2('/invoices', payload)
+    # if not res.ok:
+    #     frappe.response.res = res.json()
+    #     frappe.response.success = False
+    #     return
+    # res = res.json()
+    # if res and res['status'] == 200:
+    #     doc.custom_etims_invoice_no = str(res['data']['invoiceNo'])
+    #     doc.custom_etims_internal_data = res['data']['internalData']
+    #     doc.custom_etims_signature = res['data']['signature']
+    #     doc.custom_etims_scdc_id = res['data']['scdcId']
+    #     doc.custom_etims_scu_receipt_date = res['data']['scuReceiptDate']
+    #     doc.custom_etims_scu_receipt_no = str(res['data']['scuReceiptNo'])
+    #     doc.custom_etims_invoiceverification_url = res['data']['invoiceVerificationUrl']
+    #     doc.db_update()
+    
     doc = frappe.get_doc("Sales Invoice", name)
     included_in_print_rate = 0
     if doc.get("taxes"):
@@ -91,8 +155,8 @@ def test_payload(name):
             "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
             "qty": abs(itm.qty),
             "pkg": 0,
-            "unitPrice": abs(rate),
-            "amount": abs(amount),
+            "unitPrice": abs(itm.rate),
+            "amount": abs(itm.amount),
             "discountAmount": 0
         }
         items.append(myitem)
@@ -101,7 +165,7 @@ def test_payload(name):
         taxid = doc.tax_id
     payload = {
         "traderInvoiceNo": doc.name,
-        "totalAmount": abs(grand_total),
+        "totalAmount": abs(doc.grand_total),
         "paymentType": "02" if doc.status == "Unpaid" else "01",
         "salesTypeCode": "C" if doc.is_return == 1 else "N",
         "receiptTypeCode": "R" if doc.is_return == 1 else "S",
