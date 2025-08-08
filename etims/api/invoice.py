@@ -37,7 +37,7 @@ def on_submit(doc, method):
             "traderInvoiceNo": doc.name,
             "totalAmount": abs(grand_total),
             "paymentType": "02" if doc.status == "Unpaid" else "01",
-            "salesTypeCode": "C" if doc.custom_etims_invoice_no else "N",
+            "salesTypeCode": "C" if doc.is_return == 1 else "N",
             "receiptTypeCode": "R" if doc.is_return == 1 else "S",
             "salesStatusCode": "01",
             "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
@@ -46,6 +46,10 @@ def on_submit(doc, method):
             "salesItems": items,
             "customerPin": taxid
         }
+        if doc.is_return == 1:
+            payload.update({
+                "traderOrgInvoiceNo": doc.return_against
+            })
         res = post('/invoices', payload)
         if res and res['status'] == 200:
             doc.custom_etims_invoice_no = str(res['data']['invoiceNo'])
@@ -99,7 +103,7 @@ def test_payload(name):
         "traderInvoiceNo": doc.name,
         "totalAmount": abs(grand_total),
         "paymentType": "02" if doc.status == "Unpaid" else "01",
-        "salesTypeCode": "C" if doc.custom_etims_invoice_no else "N",
+        "salesTypeCode": "C" if doc.is_return == 1 else "N",
         "receiptTypeCode": "R" if doc.is_return == 1 else "S",
         "salesStatusCode": "01",
         "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
@@ -108,6 +112,10 @@ def test_payload(name):
         "salesItems": items,
         "customerPin": taxid
     }
+    if doc.is_return == 1:
+        payload.update({
+            "traderOrgInvoiceNo": doc.return_against
+        })
     res = post2('/invoices', payload)
     if not res.ok:
         frappe.response.res = res.json()
@@ -166,7 +174,7 @@ def test_invoice(name):
         "traderInvoiceNo": doc.name,
         "totalAmount": abs(total),
         "paymentType": "02" if doc.status == "Unpaid" else "01",
-        "salesTypeCode": "C" if doc.custom_etims_invoice_no else "N",
+        "salesTypeCode": "C" if doc.is_return == 1 else "N",
         "receiptTypeCode": "R" if doc.is_return == 1 else "S",
         "salesStatusCode": "01",
         "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
