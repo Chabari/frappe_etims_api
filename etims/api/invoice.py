@@ -68,6 +68,14 @@ def on_cancel(doc, method):
     
     
 @frappe.whitelist(allow_guest=True)
+def delete_invoice(name):
+    doc = frappe.get_doc("Sales Invoice", name)
+    res = "Failed"
+    if doc.custom_etims_invoice_no:
+        res = delete2(f'/invoices/{doc.custom_etims_invoice_no}')
+    frappe.response.res = res
+
+@frappe.whitelist(allow_guest=True)
 def test_payload(name):
     doc = frappe.get_doc("Sales Invoice", name)
     included_in_print_rate = 0

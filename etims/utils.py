@@ -44,6 +44,10 @@ def delete(endpoint):
         return False
     return response.json()
 
+def delete2(endpoint):
+    response = requests.delete(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers())
+    return response.json()
+
 def post(endpoint, payload):
     response = requests.post(f'{etims_main_url()}{endpoint}', auth=HTTPBasicAuth(etims_username(), etims_password()), headers=get_headers(), json=payload)
     if not response.ok:
