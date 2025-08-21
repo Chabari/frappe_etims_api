@@ -37,7 +37,7 @@ def on_submit(doc, method):
             "traderInvoiceNo": doc.name,
             "totalAmount": abs(grand_total),
             "paymentType": "02" if doc.status == "Unpaid" else "01",
-            "salesTypeCode": "C" if doc.is_return == 1 else "N",
+            "salesTypeCode": "T",
             "receiptTypeCode": "R" if doc.is_return == 1 else "S",
             "salesStatusCode": "01",
             "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
@@ -61,6 +61,7 @@ def on_submit(doc, method):
             doc.custom_etims_invoiceverification_url = res['data']['invoiceVerificationUrl']
             doc.db_update()
         
+        # "salesTypeCode": "C" if doc.is_return == 1 else "N",
 def on_cancel(doc, method):
     return
     if doc.custom_etims_invoice_no:

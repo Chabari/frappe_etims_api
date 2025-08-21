@@ -10,7 +10,6 @@ from requests.auth import HTTPBasicAuth
 
 import qrcode
 
-
 def get_main_company():
     return frappe.get_doc("Company", get_default_company())
 
