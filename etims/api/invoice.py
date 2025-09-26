@@ -180,7 +180,7 @@ def test_invoice(name, **args):
     if doc.tax_id:
         taxid = doc.tax_id
     payload = {
-        "traderInvoiceNo": doc.name,
+        "traderInvoiceNo": f"{doc.name}-1",
         "totalAmount": abs(total),
         "paymentType": "02" if doc.status == "Unpaid" else "01",
         "salesTypeCode": "C" if args.get('is_return') == 1 else "N",
