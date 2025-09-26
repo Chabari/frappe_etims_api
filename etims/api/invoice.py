@@ -146,33 +146,32 @@ def test_payload(name):
     frappe.response.success = True
     
 @frappe.whitelist(allow_guest=True)
-def test_invoice(name):
+def test_invoice(name, **args):
     doc = frappe.get_doc("Sales Invoice", name)
     included_in_print_rate = 0
-    if doc.get("taxes"):
-        for tax in doc.taxes:
-            included_in_print_rate = tax.included_in_print_rate
+    # if doc.get("taxes"):
+    #     for tax in doc.taxes:
+    #         included_in_print_rate = tax.included_in_print_rate
             
     items = []
     total = 0
     for itm in doc.items:
         item = frappe.get_doc("Item", itm.item_code)
-        tax_rate = 0
-        if itm.item_tax_template:
-            template = frappe.get_doc("Item Tax Template", itm.item_tax_template)
-            if template.taxes:
-                for tx in template.taxes:
-                    tax_rate = tx.tax_rate
+        # tax_rate = 0
+        # if itm.item_tax_template:
+        #     template = frappe.get_doc("Item Tax Template", itm.item_tax_template)
+        #     if template.taxes:
+        #         for tx in template.taxes:
+        #             tax_rate = tx.tax_rate
                     
-        amount = itm.amount * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.amount
-        rate = amount / abs(itm.qty)
-        total += amount
+        # amount = itm.amount * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.amount
+        total += itm.amount
         myitem = {
             "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
             "qty": abs(itm.qty),
             "pkg": 0,
-            "unitPrice": abs(rate),
-            "amount": abs(amount),
+            "unitPrice": abs(item.rate),
+            "amount": abs(itm.amount),
             "discountAmount": 0
         }
         items.append(myitem)
@@ -184,8 +183,8 @@ def test_invoice(name):
         "traderInvoiceNo": doc.name,
         "totalAmount": abs(total),
         "paymentType": "02" if doc.status == "Unpaid" else "01",
-        "salesTypeCode": "C" if doc.is_return == 1 else "N",
-        "receiptTypeCode": "R" if doc.is_return == 1 else "S",
+        "salesTypeCode": "C" if args.get('is_return') == 1 else "N",
+        "receiptTypeCode": "R" if args.get('is_return') == 1 else "S",
         "salesStatusCode": "01",
         "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
         "currency": "KES",
@@ -194,9 +193,19 @@ def test_invoice(name):
         "customerPin": taxid
     }
     
-    if doc.is_return == 1:
+    if args.get('is_return') == 1:
         payload.update({
-            "traderOrgInvoiceNo": doc.return_against
+            "traderOrgInvoiceNo": args.get('return_against')
         })
+        
+    res = post2('/invoices', payload)
+    if not res.ok:
+        frappe.response.res = res.json()
+        frappe.response.success = False
+        return
+    res = res.json()
+        
+    frappe.response.res = res
+    frappe.response.doc = doc
+    frappe.response.success = True
     
-    frappe.response.payload = payload
