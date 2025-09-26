@@ -170,7 +170,7 @@ def test_invoice(name, **args):
             "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
             "qty": abs(itm.qty),
             "pkg": 0,
-            "unitPrice": abs(item.rate),
+            "unitPrice": abs(itm.rate),
             "amount": abs(itm.amount),
             "discountAmount": 0
         }
