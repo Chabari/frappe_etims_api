@@ -208,3 +208,49 @@ def submit_in_background(kwargs):
     payload = get_item_payloan(doc)
     put(f'/items/{doc.custom_etims_item_code}', payload)
     
+def sign_invoice(doc, included_in_print_rate):
+    grand_total = 0
+    items = []
+    for itm in doc.items:
+        item = frappe.get_doc("Item", itm.item_code)
+        tax_rate = 0
+        if itm.item_tax_template:
+            template = frappe.get_doc("Item Tax Template", itm.item_tax_template)
+            if template.taxes:
+                for tx in template.taxes:
+                    tax_rate = tx.tax_rate
+                    
+        amount = itm.amount * ((tax_rate + 100) / 100) if tax_rate > 0 and included_in_print_rate == 0 else itm.amount
+        rate = amount / abs(itm.qty)
+        grand_total += amount
+        myitem = {
+            "itemCode": item.custom_etims_item_code if item.custom_etims_item_code else "",
+            "qty": abs(itm.qty),
+            "pkg": 0,
+            "unitPrice": abs(rate),
+            "amount": abs(amount),
+            "discountAmount": 0
+        }
+        items.append(myitem)
+    taxid = ""
+    if doc.tax_id:
+        taxid = doc.tax_id
+    payload = {
+        "traderInvoiceNo": doc.name,
+        "totalAmount": abs(grand_total),
+        "paymentType": "02" if doc.status == "Unpaid" else "01",
+        "salesTypeCode": "T",
+        "receiptTypeCode": "R" if doc.is_return == 1 else "S",
+        "salesStatusCode": "01",
+        "salesDate": get_datetime(f"{doc.posting_date} {doc.posting_time}"),
+        "currency": "KES",
+        "exchangeRate": 1.0,
+        "salesItems": items,
+        "customerPin": taxid
+    }
+    if doc.is_return == 1:
+        payload.update({
+            "traderOrgInvoiceNo": doc.return_against
+        })
+    res = post('/invoices', payload)
+    return res
