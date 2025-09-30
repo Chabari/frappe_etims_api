@@ -73,7 +73,7 @@ def get_taxes():
     
     if get_default_company() == "THOME AGROFARM LTD":
         return ["Kenya Tax - TAL", "VAT 16%"]
-
+    
     taxes = frappe.get_all(
         "Item Tax Template",
         filters={"company": get_default_company()},
@@ -88,10 +88,20 @@ def get_tax_code(ty):
     if taxes:
         tax = taxes[0]
         item_tax_template = tax.item_tax_template
-        if item_tax_template in get_taxes():
-            taxcode = "B"#16%
-        else:
-            taxcode = "A"#excempt
+        tax_rate = 0
+        template = frappe.get_doc("Item Tax Template", item_tax_template)
+        if template.taxes:
+            for tx in template.taxes:
+                tax_rate = tx.tax_rate
+                
+            if tax_rate > 0:
+                taxcode = "B"#16%
+                
+            # if item_tax_template in get_taxes():
+                
+            #     taxcode = "B"#16%
+            # else:
+            #     taxcode = "A"#excempt
     return taxcode 
 
 def get_datetime(data):
