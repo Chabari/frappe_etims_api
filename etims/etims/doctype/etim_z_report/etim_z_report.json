@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-08 07:20:06.214592",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_m8t6",
+  "amended_from",
+  "period_start_date",
+  "period_end_date",
+  "column_break_wgvv",
+  "posting_date",
+  "company",
+  "section_break_mebr",
+  "linked_invoices",
+  "section_break_uelm",
+  "payment_reconciliation",
+  "section_break_loqb",
+  "grand_total",
+  "net_total",
+  "total_tax",
+  "column_break_wxwz",
+  "taxes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_m8t6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Etim Z-Report",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "period_start_date",
+   "fieldtype": "Datetime",
+   "label": "Period Start Date"
+  },
+  {
+   "fieldname": "period_end_date",
+   "fieldtype": "Datetime",
+   "label": "Period End Date"
+  },
+  {
+   "fieldname": "column_break_wgvv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "section_break_mebr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "linked_invoices",
+   "fieldtype": "Table",
+   "label": "Linked Invoices",
+   "options": "Sales Invoice Reference"
+  },
+  {
+   "fieldname": "section_break_uelm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_reconciliation",
+   "fieldtype": "Table",
+   "label": "Payment Reconciliation",
+   "options": "POS Closing Shift Detail"
+  },
+  {
+   "fieldname": "section_break_loqb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wxwz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "taxes",
+   "fieldtype": "Table",
+   "label": "Taxes",
+   "options": "POS Closing Shift Taxes"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "total_tax",
+   "fieldtype": "Currency",
+   "label": "Total Tax"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-10-08 09:17:33.849743",
+ "modified_by": "Administrator",
+ "module": "Etims",
+ "name": "Etim Z-Report",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
