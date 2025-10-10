@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:Z-RPT-{MM}-{####}",
  "creation": "2025-10-08 07:20:06.214592",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -18,8 +19,10 @@
   "payment_reconciliation",
   "section_break_loqb",
   "grand_total",
+  "paid_amount",
   "net_total",
   "total_tax",
+  "credit_note_count",
   "column_break_wxwz",
   "taxes"
  ],
@@ -41,11 +44,15 @@
   {
    "fieldname": "period_start_date",
    "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Period Start Date"
   },
   {
    "fieldname": "period_end_date",
    "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Period End Date"
   },
   {
@@ -54,7 +61,7 @@
   },
   {
    "fieldname": "posting_date",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
    "label": "Posting Date"
   },
   {
@@ -84,6 +91,8 @@
   {
    "fieldname": "grand_total",
    "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Grand Total",
    "read_only": 1
   },
@@ -112,16 +121,29 @@
   {
    "fieldname": "total_tax",
    "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Total Tax"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount"
+  },
+  {
+   "fieldname": "credit_note_count",
+   "fieldtype": "Int",
+   "label": "Credit Note Count"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-10-08 09:17:33.849743",
+ "modified": "2025-10-10 07:35:23.284259",
  "modified_by": "Administrator",
  "module": "Etims",
  "name": "Etim Z-Report",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

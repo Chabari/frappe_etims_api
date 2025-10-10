@@ -38,6 +38,10 @@ function set_form_data (data, frm) {
 		frm.doc.grand_total += flt(d.grand_total);
 		frm.doc.net_total += flt(d.net_total);
 		frm.doc.total_tax += flt(d.total_taxes_and_charges);
+		frm.doc.paid_amount += flt(d.paid_amount);
+		if(d.is_return == 1){
+			frm.doc.credit_note_count += 1
+		}
 		add_to_payments(d, frm);
 		add_to_taxes(d, frm);
 	});

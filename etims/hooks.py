@@ -86,6 +86,30 @@ jinja = {
 
 fixtures = [
     {
+        "doctype": "Print Format",
+        "filters": [
+            [
+                "doc_type",
+                "in",
+                (
+                    "Z-Report"
+                ),
+            ]
+        ],
+    },
+    {
+        "doctype": "Property Setter",
+        "filters": [
+            [
+                "name",
+                "in",
+                (
+                    "Etim Z-Report-main-default_print_format",
+                ),
+            ]
+        ],
+    },
+    {
         "doctype": "Custom Field",
         "filters": [
             [
