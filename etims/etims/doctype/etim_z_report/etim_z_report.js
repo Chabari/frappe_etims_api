@@ -19,6 +19,15 @@ frappe.ui.form.on("Etim Z-Report", {
 		}
 	},
 
+	period_end_date (frm) {
+		if (frm.doc.period_start_date && frm.doc.period_end_date) {
+			reset_values(frm);
+			frappe.run_serially([
+				() => frm.trigger("get_pos_invoices")
+			]);
+		}
+	},
+
     get_pos_invoices (frm) {
 		frappe.call({
             method: "get_sale_invoices",

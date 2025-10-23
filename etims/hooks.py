@@ -92,7 +92,7 @@ fixtures = [
                 "doc_type",
                 "in",
                 (
-                    "Z-Report"
+                    "Etim Z-Report"
                 ),
             ]
         ],
