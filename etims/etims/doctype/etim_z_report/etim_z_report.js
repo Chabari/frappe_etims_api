@@ -109,6 +109,8 @@ function reset_values (frm) {
 	frm.set_value("grand_total", 0);
 	frm.set_value("net_total", 0);
 	frm.set_value("total_tax", 0);
+	frm.set_value("paid_amount", 0);
+	frm.set_value("credit_note_count", 0);
 }
 
 function refresh_fields (frm) {
@@ -118,4 +120,6 @@ function refresh_fields (frm) {
 	frm.refresh_field("grand_total");
 	frm.refresh_field("net_total");
 	frm.refresh_field("total_tax");
+	frm.refresh_field("paid_amount");
+	frm.refresh_field("credit_note_count");
 }
