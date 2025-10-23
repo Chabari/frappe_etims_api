@@ -108,6 +108,7 @@ function reset_values (frm) {
 	frm.set_value("taxes", []);
 	frm.set_value("grand_total", 0);
 	frm.set_value("net_total", 0);
+	frm.set_value("total_tax", 0);
 }
 
 function refresh_fields (frm) {
